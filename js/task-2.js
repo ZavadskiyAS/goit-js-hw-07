@@ -8,7 +8,9 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
+
 const ingredientsList = document.querySelector('#ingredients');
+
 const createIngredientsItems = ingredientsArr => {
   return ingredientsArr.reduce((listItem, ingredient) => {
     const item = document.createElement('li');
@@ -17,5 +19,6 @@ const createIngredientsItems = ingredientsArr => {
     return listItem;
   }, []);
 };
+
 const newList = createIngredientsItems(ingredients);
 ingredientsList.append(...newList);
